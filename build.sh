@@ -4,6 +4,11 @@ comm=${1-"add some"}
 
 git add -A .
 git ci -m "$comm"
-git co gh-pages
-
 gitbook build
+git co gh-pages
+cp -rf _book/* .
+git add -A .
+git ci -m "update"
+git push
+git co master
+
