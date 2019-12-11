@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>conda · GitBook</title>
+        <title>apt-get · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="conda.html" />
     
-    <link rel="prev" href="apt.html" />
+    
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -101,7 +103,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1.1" data-path="apt.html">
+        <li class="chapter active" data-level="1.1.1" data-path="apt.html">
             
                 <a href="apt.html">
             
@@ -114,7 +116,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.2" data-path="conda.html">
+        <li class="chapter " data-level="1.1.2" data-path="conda.html">
             
                 <a href="conda.html">
             
@@ -162,7 +164,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >conda</a>
+        <a href="." >apt-get</a>
     </h1>
 </div>
 
@@ -177,36 +179,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="conda">Conda</h1>
-<h2 id="env">env</h2>
-<pre><code>conda create -n env3.5 python=3.5
-conda activate env3.5
-conda deactivate
-conda env list
-conda remove -n env3.5 --all
-</code></pre><h2 id="package">Package</h2>
-<pre><code>conda list
-conda list -n xxx
-conda update xxx
-conda uninstall xxx
-</code></pre><h2 id="config">Config</h2>
-<pre><code>conda config --set auto_activate_base true
-cat ~/.condarc
-ssl_verify: true
-channels:
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-  - defaults
-show_channel_urls: true
-auto_activate_base: false
-</code></pre><h2 id="jupyter-select-env">jupyter select env</h2>
-<pre><code>conda install ipykernel
-source activate &#x73AF;&#x5883;&#x540D;&#x79F0;
+                                <h1 id="debian-package-manager">Debian Package Manager</h1>
+<h2 id="aptitude">aptitude</h2>
+<pre><code>aptitude search linux | grep header
+aptitude show linux-kernel-headers
 
-#&#x5C06;&#x73AF;&#x5883;&#x5199;&#x5165;notebook&#x7684;kernel&#x4E2D;
-python -m ipykernel install --user --name &#x73AF;&#x5883;&#x540D;&#x79F0; --display-name &quot;Python (&#x73AF;&#x5883;&#x540D;&#x79F0;)&quot;
-</code></pre><h1 id="pip">Pip</h1>
-<pre><code>pip install -U pip setuptools cython -i https://pypi.douban.com/simple
+# list package file
+dpkg -L linux-libc-dev
+</code></pre><h2 id="apt-get">apt-get</h2>
+<pre><code># clean cache
+sudo apt-get clean
 </code></pre>
                                 
                                 </section>
@@ -234,10 +216,14 @@ python -m ipykernel install --user --name &#x73AF;&#x5883;&#x540D;&#x79F0; --dis
 
             
                 
-                <a href="apt.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: apt-get">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Commands">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="conda.html" class="navigation navigation-next " aria-label="Next page: conda">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -246,7 +232,7 @@ python -m ipykernel install --user --name &#x73AF;&#x5883;&#x540D;&#x79F0; --dis
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"conda","level":"1.1.2","depth":2,"previous":{"title":"apt-get","level":"1.1.1","depth":2,"path":"apt.md","ref":"apt.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"conda.md","mtime":"2019-12-11T09:03:52.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-11T09:09:29.360Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"apt-get","level":"1.1.1","depth":2,"next":{"title":"conda","level":"1.1.2","depth":2,"path":"conda.md","ref":"conda.md","articles":[]},"previous":{"title":"Commands","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"apt-get","level":"1.1.1","depth":2,"path":"apt.md","ref":"apt.md","articles":[]},{"title":"conda","level":"1.1.2","depth":2,"path":"conda.md","ref":"conda.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"apt.md","mtime":"2019-12-11T09:03:52.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-11T09:09:29.360Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
